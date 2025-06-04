@@ -3,14 +3,22 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
+import { Heroes } from './components/heroes/heroes';
+import { FormsModule } from '@angular/forms';
+import { HeroDetail } from './components/hero-detail/hero-detail';
+import { Messages } from './components/messages/messages';
 
 @NgModule({
   declarations: [
-    App
+    App,
+    Heroes,
+    HeroDetail,
+    Messages
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners()
