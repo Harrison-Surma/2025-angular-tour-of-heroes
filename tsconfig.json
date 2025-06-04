@@ -8,6 +8,7 @@
       "@interface/*": ["app/interfaces/*"],
       "@component/*": ["app/components/*"],
       "@data/*": ["app/data/*"],
+      "@service/*": ["app/services/*"]
     },
     "strict": true,
     "noImplicitOverride": true,
