@@ -8,6 +8,10 @@ import { FormsModule } from '@angular/forms';
 import { HeroDetail } from './components/hero-detail/hero-detail';
 import { Messages } from './components/messages/messages';
 import { Dashboard } from './components/dashboard/dashboard';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryData } from '@service/in-memory-data';
+import { HeroSearchComponent } from './components/hero-search/hero-search.component';
 
 @NgModule({
   declarations: [
@@ -15,12 +19,17 @@ import { Dashboard } from './components/dashboard/dashboard';
     Heroes,
     HeroDetail,
     Messages,
-    Dashboard
+    Dashboard,
+    HeroSearchComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryData, { dataEncapsulation: false }
+    )
   ],
   providers: [
     provideBrowserGlobalErrorListeners()
